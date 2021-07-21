@@ -129,6 +129,7 @@ class Car {
     this.odometer = 0 // car initilizes with zero miles
     this.tank = tankSize // car initiazes full of gas
     this.mpg = mpg;
+    this.tankSize = tankSize;
   }
 
   /**
@@ -165,8 +166,11 @@ class Car {
    * focus.drive(1) // returns 600 (no distance driven as tank is empty)
    * focus.refuel(99) // returns 600 (tank only holds 20)
    */
-  refuel(gallons) {
-    return this.mpg * (this.tank += gallons);
+  refuel(gallonsReq) {
+    const gallonsRes = (this.tankSize > gallonsReq + this.tank) ?
+          gallonsReq :
+          this.tankSize - this.tank;
+    return this.mpg * (this.tank += gallonsRes);
   }
 }
 
