@@ -8,6 +8,13 @@
  */
 function trimProperties(obj) {
   // ✨ implement
+  const returnObj = {...obj};
+  for (key in returnObj) {
+    returnObj[key] = (returnObj.hasOwnProperty(key)) ?
+      returnObj[key].trim() :
+      returnObj[key];
+  }
+  return returnObj;
 }
 
 /**
