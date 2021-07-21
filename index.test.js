@@ -129,7 +129,8 @@ describe('[Exercise 6] Car', () => {
     expect(focus.tank).toBe(0);
   });
   test('[18] adding fuel to a full tank has no effect', () => {
-    expect(focus.tank).toBe(20);
+    focus.drive(300);
+    expect(focus.tank).toBe(10);
     focus.refuel(20);
     expect(focus.tank).toBe(20);
   });
