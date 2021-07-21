@@ -100,6 +100,7 @@ class Seasons {
         yield 'summer';
         yield 'fall';
         yield 'winter';
+        yield 'spring';
       }
     };
     this.Generator = generator();
