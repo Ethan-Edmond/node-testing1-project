@@ -193,8 +193,10 @@ class Car {
  *    // error.message is "number must be a number"
  * })
  */
-async function isEvenNumberAsync(number) {
-  return true;
+function isEvenNumberAsync(number) {
+  return new Promise((res, rej) => {
+    res(!(number % 2));
+  });
 }
 
 module.exports = {
