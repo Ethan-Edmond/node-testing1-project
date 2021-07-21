@@ -137,6 +137,9 @@ describe('[Exercise 6] Car', () => {
 });
 
 describe('[Exercise 7] isEvenNumberAsync', () => {
-  test.todo('[19] resolves true if passed an even number');
+  test('[19] resolves true if passed an even number', () => {
+    expect(isEvenNumberAsync(8)).toBeInstanceOf(Promise);
+    expect(isEvenNumberAsync(8)).resolves.toBe(true);
+  });
   test.todo('[20] resolves false if passed an odd number');
 });
