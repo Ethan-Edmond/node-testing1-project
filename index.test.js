@@ -52,7 +52,12 @@ describe('[Exercise 4] Counter', () => {
     counter.countDown();
     expect(counter.countDown()).toBe(2);
   });
-  test.todo('[8] the count eventually reaches zero but does not go below zero');
+  test('[8] the count eventually reaches zero but does not go below zero', () => {
+    for(let i = 0; i < 5; i++){
+      counter.countDown();
+    }
+    expect(counter.countDown()).toBe(0);
+  });
 });
 
 describe('[Exercise 5] Seasons', () => {
