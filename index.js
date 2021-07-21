@@ -27,6 +27,12 @@ function trimProperties(obj) {
  */
 function trimPropertiesMutation(obj) {
   // ✨ implement
+  for (key in obj) {
+    obj[key] = (obj.hasOwnProperty(key)) ?
+      obj[key].trim() :
+      obj[key];
+  }
+  return obj;
 }
 
 /**

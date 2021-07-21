@@ -24,7 +24,7 @@ describe('[Exercise 2] trimPropertiesMutation', () => {
   });
   test('[4] the object returned is the exact same one we passed in', () => {
     const original = { foo: '  foo ', bar: 'bar ', baz: ' baz' };
-    const mutation = utils.trimProperties(original);
+    const mutation = utils.trimPropertiesMutation(original);
     expect(mutation).toBe(original);
   });
 });
