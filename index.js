@@ -98,6 +98,7 @@ class Seasons {
     const generator = function* () {
       while (true) {
         yield 'summer';
+        yield 'fall';
       }
     };
     this.Generator = generator();
