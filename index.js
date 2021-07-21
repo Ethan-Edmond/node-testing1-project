@@ -99,6 +99,7 @@ class Seasons {
       while (true) {
         yield 'summer';
         yield 'fall';
+        yield 'winter';
       }
     };
     this.Generator = generator();
