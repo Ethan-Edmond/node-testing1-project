@@ -7,7 +7,6 @@
  * trimProperties({ name: '  jane  ' }) // returns a new object { name: 'jane' }
  */
 function trimProperties(obj) {
-  // ✨ implement
   const returnObj = {...obj};
   for (key in returnObj) {
     returnObj[key] = (returnObj.hasOwnProperty(key)) ?
@@ -26,7 +25,6 @@ function trimProperties(obj) {
  * trimPropertiesMutation({ name: '  jane  ' }) // returns the object mutated in place { name: 'jane' }
  */
 function trimPropertiesMutation(obj) {
-  // ✨ implement
   for (key in obj) {
     obj[key] = (obj.hasOwnProperty(key)) ?
       obj[key].trim() :
@@ -44,7 +42,6 @@ function trimPropertiesMutation(obj) {
  * findLargestInteger([{ integer: 1 }, { integer: 3 }, { integer: 2 }]) // returns 3
  */
 function findLargestInteger(integers) {
-  // ✨ implement
   if (integers.length === 0) {
     return null;
   }
@@ -85,7 +82,6 @@ class Counter {
    */
   countDown() {
     return this.Generator.next().value;
-    // ✨ implement
   }
 }
 
@@ -94,7 +90,6 @@ class Seasons {
    * [Exercise 5A] Seasons creates a seasons object
    */
   constructor() {
-    // ✨ initialize whatever properties are needed
     const generator = function* () {
       while (true) {
         yield 'summer';
@@ -119,7 +114,6 @@ class Seasons {
    * seasons.next() // returns "summer"
    */
   next() {
-    // ✨ implement
     return this.Generator.next().value;
   }
 }
@@ -134,7 +128,6 @@ class Car {
   constructor(name, tankSize, mpg) {
     this.odometer = 0 // car initilizes with zero miles
     this.tank = tankSize // car initiazes full of gas
-    // ✨ initialize whatever other properties are needed
     this.mpg = mpg;
   }
 
@@ -152,7 +145,6 @@ class Car {
    * focus.drive(200) // returns 600 (ran out of gas after 100 miles)
    */
   drive(distanceReq) {
-    // ✨ implement
     const fuelReq = distanceReq / this.mpg;
     const distanceRes = (this.tank > fuelReq) ?
           distanceReq :
@@ -174,7 +166,7 @@ class Car {
    * focus.refuel(99) // returns 600 (tank only holds 20)
    */
   refuel(gallons) {
-    // ✨ implement
+    return this.mpg * (this.tank += gallons);
   }
 }
 
