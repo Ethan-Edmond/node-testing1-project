@@ -65,7 +65,18 @@ describe('[Exercise 5] Seasons', () => {
   beforeEach(() => {
     seasons = new utils.Seasons(); // each test must start with fresh seasons
   });
-  test.todo('[9] the FIRST call of seasons.next returns "summer"');
+  const nextTimes = function(times) {
+    for (let i = 0; i < times - 1; i++) {
+      seasons.next();
+    }
+    return seasons.next();
+  };
+
+  test('[9] the FIRST call of seasons.next returns "summer"', () => {
+    const expected = 'summer';
+    const actual = nextTimes(1);
+    expect(actual).toBe(expected);
+  });
   test.todo('[10] the SECOND call of seasons.next returns "fall"');
   test.todo('[11] the THIRD call of seasons.next returns "winter"');
   test.todo('[12] the FOURTH call of seasons.next returns "spring"');
