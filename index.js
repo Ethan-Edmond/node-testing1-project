@@ -95,6 +95,12 @@ class Seasons {
    */
   constructor() {
     // ✨ initialize whatever properties are needed
+    const generator = function* () {
+      while (true) {
+        yield 'summer';
+      }
+    };
+    this.Generator = generator();
   }
 
   /**
@@ -111,6 +117,7 @@ class Seasons {
    */
   next() {
     // ✨ implement
+    return this.Generator.next().value;
   }
 }
 
