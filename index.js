@@ -60,7 +60,15 @@ class Counter {
    * @param {number} initialNumber - the initial state of the count
    */
   constructor(initialNumber) {
-    // ✨ initialize whatever properties are needed
+    const generator = function* (initialNuber){ // trying to use generators
+      let index = initialNumber;
+      while (true) {
+        index > 0 ?
+          yield index-- :
+          yield index;
+      }
+    };
+    this.Generator = generator(initialNumber);
   }
 
   /**
@@ -76,6 +84,7 @@ class Counter {
    * counter.countDown() // returns 0
    */
   countDown() {
+    return this.Generator.next().value;
     // ✨ implement
   }
 }
