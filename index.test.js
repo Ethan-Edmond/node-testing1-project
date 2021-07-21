@@ -141,5 +141,7 @@ describe('[Exercise 7] isEvenNumberAsync', () => {
     expect(utils.isEvenNumberAsync(8)).toBeInstanceOf(Promise);
     expect(utils.isEvenNumberAsync(8)).resolves.toBe(true);
   });
-  test.todo('[20] resolves false if passed an odd number');
+  test('[20] resolves false if passed an odd number', () => {
+    expect(utils.isEvenNumberAsync(45)).resolves.toBe(false);
+  });
 });
