@@ -97,7 +97,11 @@ describe('[Exercise 5] Seasons', () => {
     const actual = nextTimes(5);
     expect(actual).toBe(expected);
   });
-  test.todo('[14] the 40th call of seasons.next returns "spring"');
+  test('[14] the 40th call of seasons.next returns "spring"', () => {
+    const expected = 'spring';
+    const actual = nextTimes(40);
+    expect(actual).toBe(expected);
+  });
 });
 
 describe('[Exercise 6] Car', () => {
