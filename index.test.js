@@ -87,7 +87,11 @@ describe('[Exercise 5] Seasons', () => {
     const actual = nextTimes(3);
     expect(actual).toBe(expected);
   });
-  test.todo('[12] the FOURTH call of seasons.next returns "spring"');
+  test('[12] the FOURTH call of seasons.next returns "spring"', () => {
+    const expected = 'spring';
+    const actual = nextTimes(4);
+    expect(actual).toBe(expected);
+  });
   test.todo('[13] the FIFTH call of seasons.next returns again "summer"');
   test.todo('[14] the 40th call of seasons.next returns "spring"');
 });
