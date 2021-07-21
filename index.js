@@ -52,7 +52,7 @@ class Counter {
    * @param {number} initialNumber - the initial state of the count
    */
   constructor(initialNumber) {
-    const generator = function* (initialNuber){ // trying to use generators
+    const Generator = function* (initialNuber){ // trying to use generators
       let index = initialNumber;
       while (true) {
         index > 0 ?
@@ -60,7 +60,7 @@ class Counter {
           yield index;
       }
     };
-    this.Generator = generator(initialNumber);
+    this.generator = Generator(initialNumber);
   }
 
   /**
@@ -76,7 +76,7 @@ class Counter {
    * counter.countDown() // returns 0
    */
   countDown() {
-    return this.Generator.next().value;
+    return this.generator.next().value;
   }
 }
 
@@ -85,7 +85,7 @@ class Seasons {
    * [Exercise 5A] Seasons creates a seasons object
    */
   constructor() {
-    const generator = function* () {
+    const Generator = function* () {
       while (true) {
         yield 'summer';
         yield 'fall';
@@ -93,7 +93,7 @@ class Seasons {
         yield 'spring';
       }
     };
-    this.Generator = generator();
+    this.generator = Generator();
   }
 
   /**
@@ -109,7 +109,7 @@ class Seasons {
    * seasons.next() // returns "summer"
    */
   next() {
-    return this.Generator.next().value;
+    return this.generator.next().value;
   }
 }
 
